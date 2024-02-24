@@ -12,12 +12,12 @@ pipeline {
         }
         stage ("Checkout from SCM"){
             steps {
-                git branch: 'main', credentialsId: 'github', url: 'https://github.com/Hareeshyadavn/Hareeshyadavn.git'
+                git branch: 'main', credentialsId: 'github', url: 'https://github.com/Hareeshyadavn/aws.git'
             }
         }
         stage ("Build Application"){
             steps {
-                sh '''sudo cd /CICD
+                sh '''pwd
                 mvn clean package '''
             }
         }
