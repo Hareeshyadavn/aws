@@ -30,7 +30,7 @@ pipeline {
             steps{
                 script {
                     withSonarQubeEnv(credentialsId: 'sonar_server'){
-                    sh "mvn test"
+                    sh "mvn sonar:sonar"
                     }
                 }
                 
